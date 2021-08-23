@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<edmx:Edmx Version="1.0"
+	xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+	<edmx:DataServices
+		xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+		m:DataServiceVersion="2.0">
+		<Schema Namespace="ACLModel"
+			xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+			xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+			xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="Customer">
+				<Key>
+					<PropertyRef Name="customerID" />
+				</Key>
+				<Property Name="customerID" Type="Edm.String" />
+				<Property Name="customerName" Type="Edm.String" />
+				<Property Name="phone" Type="Edm.String" />
+				<Property Name="city" Type="Edm.String" />
+				<Property Name="region" Type="Edm.String" />
+				<Property Name="country" Type="Edm.String" />
+				<Property Name="zip" Type="Edm.String" />
+			</EntityType>
+			<EntityContainer Name="Northwind">
+				<EntitySet Name="Customers" EntityType="OData.Customer" />
+			</EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
